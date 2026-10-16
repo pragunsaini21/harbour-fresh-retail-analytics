@@ -1,0 +1,15 @@
+table_name,grain,description
+dim_date,1 row per calendar date,Calendar attributes used across fact tables
+dim_department,1 row per department,Retail department master
+dim_store,1 row per store,Store master
+dim_supplier,1 row per supplier,Supplier master and lead-time attributes
+dim_product,1 row per SKU,Product/SKU master
+dim_promotion,1 row per campaign,Promotion/event master
+bridge_promotion_product_store,1 promotion x 1 product x 1 store,Planned promotion assortment and discount
+fact_budget,1 store x 1 department x 1 month,Monthly budget targets
+fact_purchase_orders,1 product line per purchase order,"Ordering, receipt, supplier and replenishment history"
+fact_inventory_snapshot,1 product x 1 store x 1 day,Daily system inventory position
+fact_inventory_count,1 physical count event,System vs physical inventory counts
+fact_inventory_adjustment,1 adjustment event,"Shrink, spoilage, damage and count corrections"
+fact_promotion_spend,1 promotion spend entry,Promotion investment/funding
+fact_sales,1 product line per customer transaction,Sales transaction-line history
